@@ -1,0 +1,37 @@
+﻿@model WebExample.Models.Item
+
+<form method="post" asp-action="Create">
+    <div class="container p-3">
+        <h2 class="text-primary">Add Item</h2>
+        <table class="table table-bordered table-striped" style=" width:100% ">
+            <thead>
+                <tr>
+                    <th>
+                        <label asp-for="ItemName.ItemName"></label>
+                    </th>
+                    <th>
+                        <label asp-for="Borrower"></label>
+                    </th>
+                    <th>
+                        <label asp-for="Lender"></label>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="30%">
+                        <input type="text" asp-for="ItemName.ItemName" class="form-control" />
+                    </td>
+                    <td><input asp-for="Borrower" class="form-control" /></td>
+                    <td><input asp-for="Lender" class="form-control" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="col-2 text-center">
+            <input type="submit" class="btn btn-info w-75" value="Create" />
+            <a asp-controller="Item" asp-action="Index" class="btn btn-danger w-75"> Go back</a>
+        </div>
+    </div>
+</form>
+
+

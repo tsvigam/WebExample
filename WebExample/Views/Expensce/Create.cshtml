@@ -1,0 +1,40 @@
+﻿@model WebExample.Models.Expensce
+
+<form method="post" asp-action="Create">
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="container p-3">
+        <h2 class="text-primary">Add Expense</h2>
+        <table class="table table-bordered table-striped" style=" width:100% ">
+            <thead>
+                <tr>
+                    <th>
+                        <label asp-for="ItemName"></label>
+                    </th>
+                    <th>
+                        <label asp-for="Amount"></label>
+                    </th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="30%">
+                        <input asp-for="ItemName" class="form-control" />
+                        <span asp-validation-for="ItemName" class="text-danger"> </span>
+                    </td>
+                    <td>
+                        <input asp-for="Amount" class="form-control" />
+                        <span asp-validation-for="Amount" class="text-danger"> </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="col-2 text-center">
+            <input type="submit" class="btn btn-info w-75" value="Create" />
+            <a asp-controller="Expensce" asp-action="Index" class="btn btn-danger w-75"> Go back</a>
+        </div>
+    </div>
+</form>
+
+
